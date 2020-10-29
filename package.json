@@ -1,0 +1,43 @@
+{
+  "name": "git-identities",
+  "version": "0.0.1",
+  "description": "🎭 usering git identities easily!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "git-identities": "./bin/git-identities.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcsapo/git-identities.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielcsapo/git-identities/issues"
+  },
+  "homepage": "https://github.com/gabrielcsapo/git-identities#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.2.0",
+    "conf": "^7.1.2",
+    "enquirer": "^2.3.6"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.2",
+    "prettier-standard": "^16.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier-standard --write --ignore-unknown"
+    ]
+  }
+}
